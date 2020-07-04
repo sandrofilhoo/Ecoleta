@@ -1,0 +1,175 @@
+#page-create-point {
+    width: 90%;
+    max-width: 1100px;
+
+    margin: 0 auto;   
+}
+
+#page-create-point header {
+    margin-top: 48px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#page-create-point header a {
+    color: var(--title-color);
+    font-weight: bold;
+
+    display: flex;
+    align-items: center;
+
+}
+
+#page-create-point header a span {
+    margin-right: 16px;
+    background-image: url('../icones/arrow-left.svg');
+
+    display: flex;
+
+    width: 20px;
+    height: 24px;
+}
+form {
+    background-color: white;
+    margin: 80px auto;
+  
+    /*preenchimento*/
+    padding:64px ;
+
+
+    border-radius: 8px;
+
+    max-width: 730px;
+
+
+}
+form h1 {
+    font-size: 36px;
+}
+form fieldset {
+    margin-top: 64px;
+
+    border: 0;
+}
+form legend {
+    margin-bottom: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+}
+form legend h2 {
+    font-size: 24px;
+}
+form legend span{
+    font-size: 14px;
+    color: var(--title-color);
+
+}
+form .field{
+    flex: 1;/*serve para almentar a largura do campo*/
+
+
+    display: flex;
+    flex-direction: column;/*deixa os elementos um embaixo do outro e os campos de preenchimento tb*/
+
+    margin-bottom: 24px;
+     
+}
+form .field-group{
+    display: flex;/*flex deixa um do lado do outro,como coluna*/
+
+}
+form input,
+form select {/*posso colocar a virgula para adicionar um form*/
+    background-color: #f0f0f5;
+
+    border: 0;/*seleciona a grocura da borda(por padrao ela vem com,mas se colocar 0 ele some)*/
+    padding: 16px 24px;/*dimenciona o tamanho do campo de preenchimento*/
+    font-size: 16px;/*aumenta ou diminui o tamanho da fonte*/
+
+    /*outline: none;retira a linha preta quando selecionado(mas eu gostei do contexto visual e desativei a opçao)*/
+
+    border-radius: 8px;/*serve para arredondar os campos*/
+}
+form select{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+form label{
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+form .field-group .field + .field{
+    margin-left: 24px;
+}
+form button{
+    width: 256px;/*altura*/
+    height: 56px;/*largura*/
+
+    background-color: var(--primary-color);
+    border-radius: 8px;
+
+    color: white;
+
+    font-weight: bold;
+    font-size: 16px;
+    border: 0;
+
+
+    margin-top: 40px;
+    transition: background-color 400ms;
+
+}
+form button:hover{
+    /*para quando passar o mouse em cima ele mudar de cor*/
+    background-color: #2fb86e;
+}
+.items-grid{
+    display: grid;/*display flex coloca um do lado do outro*/
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 16px;/*é uma opçao do grid*/
+}
+.items-grid li {
+    background-color: #f5f5f5;
+    list-style: none;/*tira a marcaçao*/
+
+    border: 2px solid #f5f5f5;/*adiciona borda*/
+    border-radius: 8px;/*espaçamento de borda*/
+
+    height: 180px;
+
+    padding: 32px 24px 16px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    text-align: center;/*alinhar o texto ao centro*/
+    cursor: pointer;/*responsavel por mudar a seta pela maozinha do mouse na hora de clicar*/
+}
+.items-grid li span {
+    margin-top: 12px;
+    flex: 1;/*tamanho preencher so*/
+    display: flex;
+    align-items: center;
+
+
+    color: var(--title-color);
+
+}
+.items-grid li.selected{
+    background: #e1faec;
+    border: 2px solid #34cb79;
+
+}
+.items-grid li img,
+.items-grid li span{
+    pointer-events: none;/*manda ele pegar apenas o pai(o pai ou a imagem)*/
+}
